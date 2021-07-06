@@ -48,11 +48,28 @@ head[2].textContent=siteContent["nav"]["nav-item-3"]
 head[3].textContent=siteContent["nav"]["nav-item-4"]
 head[4].textContent=siteContent["nav"]["nav-item-5"]
 head[5].textContent=siteContent["nav"]["nav-item-6"]
+head[0].style.color="green"
+head[1].style.color="green"
+head[2].style.color="green"
+head[3].style.color="green"
+head[4].style.color="green"
+head[5].style.color="green"
 
-const ctatext=document.querySelector('.cta-text h1');
-ctatext.textContent=siteContent["cta"]["h1"];
-ctatext.style.width="300px"
-ctatext.style.height="200px"
+const blog=document.createElement('a')
+blog.textContent='Blog'
+blog.href='#'
+document.querySelector('nav').appendChild(blog)
+blog.style.color="green"
+
+const mission=document.createElement('a')
+mission.textContent='Mission'
+mission.href='#'
+document.querySelector('nav').prepend(mission)
+mission.style.color="green"
+
+const ctaText = document.querySelector('.cta-text');
+const h1 = ctaText.querySelector('h1');
+h1.innerHTML = 'DOM' + '<br />' + 'Is' + '<br />' + 'Awesome';
 const cta=document.querySelector('.cta-text button');
 cta.textContent=siteContent["cta"]["button"]
 const ctaimg=document.querySelector('#cta-img')
